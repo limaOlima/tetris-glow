@@ -4,34 +4,15 @@ export const BLOCK_SIZE = 30;
 export const LINES_PER_LEVEL = 10;
 export const COLORS = [
   'none',
-  'rgba(0, 255, 255)',
-  'rgba(0, 0, 255)',
-  'rgba(255, 132, 0)',
-  'rgba(255, 255, 0)',
-  'rgba(0, 255, 0)',
-  'rgba(255, 0, 255)',
-  'rgba(255, 0, 0)',
+  'rgba(123, 221, 255)',
+  'rgba(23, 163, 255)',
+  'rgba(242, 175, 160)', 
+  'rgba(25, 255, 232)', 
+  'rgba(35, 19, 58)', 
+  'rgba(21, 176, 176)', 
+  'rgba(202, 133, 222)',
 ];
-export const COLORSLIGHTER= [
-  'none',
-  'rgba(132, 255, 255)',
-  'rgba(132, 132, 255)',
-  'rgba(255, 195, 132)',
-  'rgba(255, 255, 132)',
-  'rgba(132, 255, 132)',
-  'rgba(255, 132, 255)',
-  'rgba(255, 132, 132)',
-];
-export const COLORSDARKER= [
-  'none',
-  'rgba(0, 132, 132)',
-  'rgba(0, 0, 132)',
-  'rgba(132, 65, 0)',
-  'rgba(132, 132, 0)',
-  'rgba(0, 132, 0)',
-  'rgba(132, 0, 132)',
-  'rgba(132, 0, 0)',
-];
+
 export const SHAPES = [
   [],
   [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0]],

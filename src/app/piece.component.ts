@@ -1,4 +1,4 @@
-import { COLORS, SHAPES, COLORSLIGHTER, COLORSDARKER } from './constants';
+import { COLORS, SHAPES} from './constants';
 
 export interface IPiece {
   x: number;
@@ -23,43 +23,10 @@ export class Piece implements IPiece {
     const typeId = this.randomizeTetrominoType(COLORS.length - 1);
     this.shape = SHAPES[typeId];
     this.color = COLORS[typeId];
-    this.colorLighter = COLORSLIGHTER[typeId];
-    this.colorDarker = COLORSDARKER[typeId];
     this.x = typeId === 4 ? 4 : 3;
     this.y = 0;
   }
 
-  private add3D(ctx: CanvasRenderingContext2D, x: number, y: number): void {
-    //Darker Color
-    ctx.fillStyle = this.colorDarker;
-    // Vertical
-    ctx.fillRect(x + .9, y, .1, 1);
-    // Horizontal
-    ctx.fillRect(x, y + .9, 1, .1);
-
-    //Darker Color - Inner 
-    // Vertical
-    ctx.fillRect(x + .65, y + .3, .05, .3);
-    // Horizontal
-    ctx.fillRect(x + .3, y + .6, .4, .05);
-
-    // Lighter Color - Outer
-    ctx.fillStyle = this.colorLighter;
-
-    // Lighter Color - Inner 
-    // Vertical
-    ctx.fillRect(x + .3, y + .3, .05, .3);
-    // Horizontal
-    ctx.fillRect(x + .3, y + .3, .4, .05);
-
-    // Lighter Color - Outer
-    // Vertical
-    ctx.fillRect(x, y, .05, 1);
-    ctx.fillRect(x, y, .1, .95);
-    // Horizontal
-    ctx.fillRect(x, y, 1 , .05);
-    ctx.fillRect(x, y, .95, .1);
-  }
 
   private addNextShadow(ctx: CanvasRenderingContext2D, x: number, y: number): void {
    ctx.fillStyle = 'black';
@@ -74,7 +41,6 @@ export class Piece implements IPiece {
           const currentX = this.x + x;
           const currentY = this.y + y;
           this.ctx.fillRect(currentX, currentY, 1, 1);
-          this.add3D(this.ctx, currentX, currentY);
         }
       });
     });
@@ -98,7 +64,6 @@ export class Piece implements IPiece {
           const currentX = x + .025;
           const currentY = y + .025;
           ctxNext.fillRect(currentX, currentY, 1-.025, 1 -.025);
-          this.add3D(ctxNext, currentX, currentY);
         }
       });
     });

@@ -6,6 +6,7 @@
 .grid {
   display: grid;
   grid-template-columns: 320px 200px;
+  justify-content: center;
 }
 
 .right-column {
@@ -25,18 +26,18 @@
   justify-content: space-between;
 
   .play-button {
-    background-color: #4caf50;
+    background-color: #76d593;
   }
 
   .reset-button {
-    background-color: red;
+    background-color:  #f55a9e;
   }
 
   .pause-button {
-    background-color: #4caf50;
+    background-color: #fadfc2;
 
     &.button-disabled {
-      background-color: #cccccc;
+      background-color: #fdfdfd;
     }
   }
 

@@ -10,12 +10,10 @@ import {
   BLOCK_SIZE,
   ROWS,
   COLORS,
-  COLORSLIGHTER,
   LINES_PER_LEVEL,
   LEVEL,
   POINTS,
-  KEY,
-  COLORSDARKER
+  KEY
 } from './constants';
 import { Piece, IPiece } from './piece.component';
 import { GameService } from './game.service';
@@ -206,38 +204,6 @@ export class BoardComponent implements OnInit {
       });
     });
   }
-
-  private add3D(x: number, y: number, color: number): void {
-    //Darker Color
-    this.ctx.fillStyle = COLORSDARKER[color];
-    // Vertical
-    this.ctx.fillRect(x + .9, y, .1, 1);
-    // Horizontal
-    this.ctx.fillRect(x, y + .9, 1, .1);
-
-    //Darker Color - Inner 
-    // Vertical
-    this.ctx.fillRect(x + .65, y + .3, .05, .3);
-    // Horizontal
-    this.ctx.fillRect(x + .3, y + .6, .4, .05);
-
-    // Lighter Color - Outer
-    this.ctx.fillStyle = COLORSLIGHTER[color];
-
-    // Lighter Color - Inner 
-    // Vertical
-    this.ctx.fillRect(x + .3, y + .3, .05, .3);
-    // Horizontal
-    this.ctx.fillRect(x + .3, y + .3, .4, .05);
-
-    // Lighter Color - Outer
-    // Vertical
-    this.ctx.fillRect(x, y, .05, 1);
-    this.ctx.fillRect(x, y, .1, .95);
-    // Horizontal
-    this.ctx.fillRect(x, y, 1 , .05);
-    this.ctx.fillRect(x, y, .95, .1);
-  }
   
   private addOutlines() {
     for(let index = 1; index < COLS; index++) {
@@ -257,7 +223,6 @@ export class BoardComponent implements OnInit {
         if (value > 0) {
           this.ctx.fillStyle = COLORS[value];
           this.ctx.fillRect(x, y, 1, 1);
-          this.add3D(x, y, value);
         }
       });
     });
