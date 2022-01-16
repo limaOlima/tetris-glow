@@ -1,8 +1,9 @@
-# ng-tetris
+# flat-tetris
 
-Tetris game in Angular. 
+Tetris game in Angular forked from melcor76/ng-tetris
 
 ![tetris picture](src/assets/image-tetris.png)
+
 
 ## Development server
 
