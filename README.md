@@ -1,8 +1,8 @@
 # ng-tetris
 
-Tetris game in Angular. [Play it now!](https://focused-mestorf-930f82.netlify.com/)
+Tetris game in Angular. 
 
-![tetris picture](src/assets/share-image-large.png)
+![tetris picture](src/assets/image-tetris.png)
 
 ## Development server
 
