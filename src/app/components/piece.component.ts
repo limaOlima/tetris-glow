@@ -1,4 +1,4 @@
-import { COLORS, SHAPES} from './constants';
+import { COLORS, SHAPES } from "../constants";
 
 export interface IPiece {
   x: number;

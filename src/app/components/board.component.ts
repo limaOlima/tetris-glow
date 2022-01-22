@@ -13,8 +13,8 @@ import {
   LINES_PER_LEVEL,
   LEVEL,
   POINTS,
-  KEY
-} from './constants';
+  KEY,
+} from '../constants';
 import { Piece, IPiece } from './piece.component';
 import { GameService } from './game.service';
 import { Zoundfx } from 'ng-zzfx';
