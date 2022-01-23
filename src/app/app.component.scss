@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-  margin: auto;
+  margin: 40px auto;
 }
 
 .page-bg, .animation-wrapper {
@@ -113,10 +113,10 @@ body {
 
 @keyframes animParticle {
   from {
-    transform: translateY(0px);
+    transform: translateY(-100px);
   }
   to {
-    transform: translateY($spacing * -1);
+    transform: translateY($spacing * -1 );
   }
 }
 
@@ -131,6 +131,10 @@ h1 {
   -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
   -moz-animation: neon1 1.5s ease-in-out infinite alternate;
   animation: neon1 1.5s ease-in-out infinite alternate;
+  padding-bottom: 40px;
+  padding-left: 40px;
+
+
 }
 
 h1:hover {
@@ -169,7 +173,7 @@ h1:hover {
 
 @-moz-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff,
+    text-shadow: 0 0 15px #fff,
       0 0 20px #fff,
       0 0 30px #fff,
       0 0 40px #FF1177,
@@ -194,7 +198,7 @@ h1:hover {
 
 @keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff,
+    text-shadow: 0 0 15px #fff,
       0 0 20px #fff,
       0 0 30px #fff,
       0 0 40px #FF1177,
